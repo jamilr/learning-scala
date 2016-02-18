@@ -1,4 +1,5 @@
 /**
+  *
   * User : Jamil Rzayev
   *
   * Fibonacci class solves the problem of finding n-th Fibonacci number
@@ -8,21 +9,17 @@
   *
   *
   */
-class Fibonacci {
+
+object Fibonacci {
 
   def f(n : Int) : Int = {
 
     if (n <= 1) return 1;
 
-    return f(n -1) + f(n - 2);
+    return f(n - 1) + f(n - 2);
   }
-}
-
-object FibonacciEntry {
 
   def main(args: Array[String]) = {
-
-    val fib = new Fibonacci();
 
     val inputs = new Array[Int](4);
 
@@ -32,7 +29,9 @@ object FibonacciEntry {
     inputs(3) = 0;
 
     for (x <- inputs) {
-      println(fib.f(x));
+      println(f(x));
     }
+
   }
+
 }
